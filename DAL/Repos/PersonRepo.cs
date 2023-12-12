@@ -10,7 +10,7 @@ namespace DAL.Repos
     {
         public static String GetName(int id)
         {
-            return id == 110 ? "Apon" : "Not found";
+            return id == 120 ? "Apon" : "Not found";
         }
     }
 }
