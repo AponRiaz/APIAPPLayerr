@@ -52,6 +52,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="EF\Models\Person.cs" />
+    <Compile Include="EF\PContext.cs" />
+    <Compile Include="Migrations\202312121620183_IntDB.cs" />
+    <Compile Include="Migrations\202312121620183_IntDB.designer.cs">
+      <DependentUpon>202312121620183_IntDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\PersonRepo.cs" />
   </ItemGroup>
@@ -59,7 +66,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202312121620183_IntDB.resx">
+      <DependentUpon>202312121620183_IntDB.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
